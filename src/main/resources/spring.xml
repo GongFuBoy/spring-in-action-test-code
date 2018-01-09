@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/aop
+              http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+       <!-- 开启直接class进行代理，无需实现接口-->
+       <aop:config proxy-target-class="true"></aop:config>
 
        <bean id="hand" class="com.github.gongfuboy.chapter1.Hand"></bean>
        <bean id="human" class="com.github.gongfuboy.chapter1.Human">
               <property name="hand" ref="hand"></property>
        </bean>
+       <!-- 定义需要增强的方法-->
+       <bean id="washHand" class="com.github.gongfuboy.chapter1.WashHand"></bean>
+
+       <aop:config>
+              <!-- 引用需要增强的类-->
+              <aop:aspect ref="washHand">
+                     <!-- 定义切面，也就是需要被增强的位置-->
+                     <aop:pointcut id="pointcut" expression="execution(* *.printMyself(..))"></aop:pointcut>
+                     <!-- 执行被增强方法前，需要增强的动作-->
+                     <aop:before pointcut-ref="pointcut" method="printHandBefore"></aop:before>
+                     <!-- 指定被增强方法后，需要增强的动作-->
+                     <aop:after method="printHandAfter" pointcut-ref="pointcut"></aop:after>
+              </aop:aspect>
+       </aop:config>
+
 </beans>
