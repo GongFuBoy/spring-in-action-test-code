@@ -1,6 +1,5 @@
-package com.githun.gongfuboy.chapter1;
+package com.github.gongfuboy.chapter1;
 
-import com.github.gongfuboy.chapter1.Human;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
