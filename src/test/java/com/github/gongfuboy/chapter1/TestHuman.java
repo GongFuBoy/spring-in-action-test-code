@@ -13,7 +13,7 @@ public class TestHuman {
 
     @Test
     public void testHuman() {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("chapter1/spring.xml");
         Human human = (Human) applicationContext.getBean("human");
         human.printHand();
     }
