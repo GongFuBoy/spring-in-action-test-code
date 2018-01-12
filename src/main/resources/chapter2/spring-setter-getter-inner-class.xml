@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="set-get-bean" class="com.github.gongfuboy.chapter2.GetSetBean">
+              <property name="age" value="10"></property>
+              <property name="description" value="这是一个简单类"></property>
+              <property name="ref">
+                     <!-- 注入一个内部类，这里的bean最好不要填写id-->
+                     <bean class="java.lang.Object"></bean>
+              </property>
+       </bean>
+
+</beans>

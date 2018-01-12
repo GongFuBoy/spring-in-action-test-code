@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="temp" class="java.lang.Object"></bean>
+
+       <bean id="spel-bean" class="com.github.gongfuboy.chapter2.SpELBean">
+              <property name="age" value="#{'1'}"></property>
+              <property name="temp" value="#{temp}"></property>
+              <property name="clazz" value="#{temp.getClass()}"></property>
+              <property name="PI" value="#{T(java.lang.Math).PI}"></property>
+              <property name="random" value="#{T(java.lang.Math).random()}"></property>
+       </bean>
+
+</beans>

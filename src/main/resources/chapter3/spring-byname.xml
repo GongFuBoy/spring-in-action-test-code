@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="banana" class="com.github.gongfuboy.chapter3.Banana">
+              <property name="description" value="我是一个香蕉"></property>
+       </bean>
+
+       <bean id="apple" class="com.github.gongfuboy.chapter3.Apple" autowire="byName">
+              <property name="description" value="我是一个苹果"></property>
+       </bean>
+
+</beans>

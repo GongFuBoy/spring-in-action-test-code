@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="sp-el-math-bean" class="com.github.gongfuboy.chapter2.SpELMathBean">
+              <property name="add" value="#{T(java.lang.Integer).valueOf(1) + 1}"></property>
+              <property name="device" value="#{T(java.lang.Integer).valueOf(1) / 1}"></property>
+              <property name="multiply" value="#{T(java.lang.Integer).valueOf(1) * 1}"></property>
+              <property name="subtract" value="#{T(java.lang.Integer).valueOf(1) - 1}"></property>
+              <property name="equal" value="#{T(java.lang.Integer).valueOf(1) ge 1}"></property>
+              <property name="conditionalExpression" value="#{T(java.lang.Integer).valueOf(1) == 1 ? true : false}"></property>
+              <property name="grep" value="#{T(java.lang.Integer).valueOf(1) matches '[a-z]'}"></property>
+       </bean>
+
+</beans>

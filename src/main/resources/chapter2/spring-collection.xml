@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="temp" class="java.lang.Object"></bean>
+
+       <bean id="collecion-bean" class="com.github.gongfuboy.chapter2.CollectionBean">
+              <!-- 装配一个list-->
+              <property name="list">
+                     <list>
+                            <value>123</value>
+                            <value>456</value>
+                            <value>789</value>
+                     </list>
+              </property>
+              <!-- 装配一个set-->
+              <property name="set">
+                     <set>
+                            <bean class="java.lang.Object"></bean>
+                            <bean class="java.lang.Object"></bean>
+                            <bean class="java.lang.Object"></bean>
+                     </set>
+              </property>
+              <!-- 装配一个map-->
+              <property name="map">
+                     <map>
+                            <entry key="1" value-ref="temp"></entry>
+                            <entry key="2" value-ref="temp"></entry>
+                            <entry key="3" value="tempString"></entry>
+                     </map>
+              </property>
+              <!-- 装配一个properties-->
+              <property name="properties">
+                     <props>
+                            <!-- 装配一个null值-->
+                            <prop key="1">first</prop>
+                            <prop key="2">second</prop>
+                            <prop key="3">third</prop>
+                     </props>
+
+              </property>
+
+       </bean>
+
+</beans>
