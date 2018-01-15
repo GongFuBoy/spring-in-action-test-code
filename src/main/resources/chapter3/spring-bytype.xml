@@ -4,15 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
               http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-       <bean id="temp1" class="com.github.gongfuboy.chapter3.Temp1">
+       <bean id="temp1" class="com.github.gongfuboy.test.spring.chapter3.Temp1">
               <property name="description" value="temp1"></property>
        </bean>
 
-       <bean id="temp2" class="com.github.gongfuboy.chapter3.Temp1" autowire-candidate="false">
+       <bean id="temp2" class="com.github.gongfuboy.test.spring.chapter3.Temp1" autowire-candidate="false">
              <property name="description" value="temp2"></property>
        </bean>
 
-       <bean id="byTypeBean" class="com.github.gongfuboy.chapter3.ByTypeBean" autowire="byType">
+       <bean id="byTypeBean" class="com.github.gongfuboy.test.spring.chapter3.ByTypeBean" autowire="byType">
        </bean>
 
 </beans>

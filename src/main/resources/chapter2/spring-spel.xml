@@ -6,7 +6,7 @@
 
        <bean id="temp" class="java.lang.Object"></bean>
 
-       <bean id="spel-bean" class="com.github.gongfuboy.chapter2.SpELBean">
+       <bean id="spel-bean" class="com.github.gongfuboy.test.spring.chapter2.SpELBean">
               <property name="age" value="#{'1'}"></property>
               <property name="temp" value="#{temp}"></property>
               <property name="clazz" value="#{temp.getClass()}"></property>

@@ -6,7 +6,7 @@
 
        <bean id="temp" class="java.lang.Object"></bean>
 
-       <bean id="collecion-bean" class="com.github.gongfuboy.chapter2.CollectionBean">
+       <bean id="collecion-bean" class="com.github.gongfuboy.test.spring.chapter2.CollectionBean">
               <!-- 装配一个list-->
               <property name="list">
                      <list>

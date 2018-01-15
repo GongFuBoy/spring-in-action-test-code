@@ -5,7 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
        <!-- 通过工厂方法获取bean的实例-->
-       <bean id="beanFactory" class="com.github.gongfuboy.chapter2.BeanFactory" factory-method="instance">
+       <bean id="beanFactory" class="com.github.gongfuboy.test.spring.chapter2.BeanFactory" factory-method="instance">
        </bean>
 
 </beans>

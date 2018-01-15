@@ -4,11 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
               http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-       <bean id="banana" class="com.github.gongfuboy.chapter3.Banana">
+       <bean id="banana" class="com.github.gongfuboy.test.spring.chapter3.Banana">
               <property name="description" value="我是一个香蕉"></property>
        </bean>
 
-       <bean id="apple" class="com.github.gongfuboy.chapter3.Apple" autowire="byName">
+       <bean id="apple" class="com.github.gongfuboy.test.spring.chapter3.Apple" autowire="byName">
               <property name="description" value="我是一个苹果"></property>
        </bean>
 

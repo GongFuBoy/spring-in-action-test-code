@@ -9,12 +9,12 @@
        <!-- 开启直接class进行代理，无需实现接口-->
        <aop:config proxy-target-class="true"></aop:config>
 
-       <bean id="hand" class="com.github.gongfuboy.chapter1.Hand"></bean>
-       <bean id="human" class="com.github.gongfuboy.chapter1.Human">
+       <bean id="hand" class="com.github.gongfuboy.test.spring.chapter1.Hand"></bean>
+       <bean id="human" class="com.github.gongfuboy.test.spring.chapter1.Human">
               <property name="hand" ref="hand"></property>
        </bean>
        <!-- 定义需要增强的方法-->
-       <bean id="washHand" class="com.github.gongfuboy.chapter1.WashHand"></bean>
+       <bean id="washHand" class="com.github.gongfuboy.test.spring.chapter1.WashHand"></bean>
 
        <aop:config>
               <!-- 引用需要增强的类-->

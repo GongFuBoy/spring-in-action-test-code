@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
               http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-        <bean id="work-name-bean" class="com.github.gongfuboy.chapter2.WorkNameBean"
+        <bean id="work-name-bean" class="com.github.gongfuboy.test.spring.chapter2.WorkNameBean"
               p:age="10" p:description="这是一个简单的描述"></bean>
 
 </beans>

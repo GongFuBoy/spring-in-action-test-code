@@ -5,15 +5,15 @@
               http://www.springframework.org/schema/beans/spring-beans.xsd">
 
        <!-- 所有bean声明在这里-->
-       <bean id="simple" class="com.github.gongfuboy.chapter2.Simple"></bean>
+       <bean id="simple" class="com.github.gongfuboy.test.spring.chapter2.Simple"></bean>
 
-       <bean id="simple1" class="com.github.gongfuboy.chapter2.Simple">
+       <bean id="simple1" class="com.github.gongfuboy.test.spring.chapter2.Simple">
               <!-- 注入基本类型或者字符串类型-->
               <constructor-arg name="age" value="3"></constructor-arg>
        </bean>
 
        <!-- 注入引用类型-->
-       <bean id="simple2" class="com.github.gongfuboy.chapter2.Simple">
+       <bean id="simple2" class="com.github.gongfuboy.test.spring.chapter2.Simple">
               <constructor-arg name="age" value="3"></constructor-arg>
               <constructor-arg name="temp" ref="simple1"></constructor-arg>
        </bean>
