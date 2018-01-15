@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="temp1" class="com.github.gongfuboy.chapter3.Temp1">
+              <property name="description" value="temp1"></property>
+       </bean>
+
+       <bean id="temp2" class="com.github.gongfuboy.chapter3.Temp1" autowire-candidate="false">
+             <property name="description" value="temp2"></property>
+       </bean>
+
+       <bean id="byTypeBean" class="com.github.gongfuboy.chapter3.ByTypeBean" autowire="byType">
+       </bean>
+
+</beans>
